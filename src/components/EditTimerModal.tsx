@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useTimerStore } from '../store/useTimerStore';
 import { Timer } from '../types/timer';
 import { validateTimerForm } from '../utils/validation';
-import { ModalButtons } from './ModalButtonsProps';
+import { ModalButtons } from './ModalButtons';
 
 interface EditTimerModalProps {
   isOpen: boolean;
