@@ -9,7 +9,11 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      <Toaster position="top-right" />
+      <Toaster 
+      className="fixed z-50 p-4 text-white
+      bottom-4 left-1/2 transform -translate-x-1/2  /* Mobile: Bottom center */
+      sm:top-10 sm:right-2 sm:bottom-auto sm:left-auto /* Desktop: Top-right corner */"
+      />
       <div className="container mx-auto px-4 py-8">
         <div className='flex justify-between mb-8' >
           <div className="flex items-center gap-3">
