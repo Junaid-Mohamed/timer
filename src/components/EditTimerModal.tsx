@@ -188,7 +188,6 @@ export const EditTimerModal: React.FC<EditTimerModalProps> = ({
           <ModalButtons
             onClose={handleClose}
             onSubmit={handleSubmit}
-            isSubmitDisabled={!isTitleValid || !isTimeValid}
             submitLabel="Save Changes"
           />
 

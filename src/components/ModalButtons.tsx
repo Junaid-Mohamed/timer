@@ -3,7 +3,6 @@ import React from 'react';
 interface ModalButtonsProps {
   onClose: () => void;
   onSubmit: (e: React.FormEvent) => void;
-  isSubmitDisabled: boolean;
   cancelLabel?: string;
   submitLabel?: string;
   submitButtonClass?: string;
@@ -12,7 +11,6 @@ interface ModalButtonsProps {
 export const ModalButtons: React.FC<ModalButtonsProps> = ({
   onClose,
   onSubmit,
-  isSubmitDisabled,
   cancelLabel = 'Cancel',
   submitLabel = 'Save Changes',
   submitButtonClass = 'bg-blue-600 hover:bg-blue-700',
@@ -30,9 +28,8 @@ export const ModalButtons: React.FC<ModalButtonsProps> = ({
         type="button"
         onClick={onSubmit}
         className={`px-4 py-2 text-sm font-medium text-white rounded-md transition-colors ${
-          isSubmitDisabled ? 'bg-blue-400 cursor-not-allowed' : submitButtonClass
+           submitButtonClass
         }`}
-        disabled={isSubmitDisabled}
       >
         {submitLabel}
       </button>

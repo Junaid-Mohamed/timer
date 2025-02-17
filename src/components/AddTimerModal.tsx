@@ -30,6 +30,7 @@ export const AddTimerModal: React.FC<AddTimerModalProps> = ({ isOpen, onClose })
     e.preventDefault();
     
     if (!validateTimerForm({ title, description, hours, minutes, seconds })) {
+      console.log('Invalid form')
       return;
     }
 
@@ -179,7 +180,7 @@ export const AddTimerModal: React.FC<AddTimerModalProps> = ({ isOpen, onClose })
           <ModalButtons
             onClose={handleClose}
             onSubmit={handleSubmit}
-            isSubmitDisabled={!isTitleValid || !isTimeValid}
+            // isSubmitDisabled={!isTitleValid || !isTimeValid}
             submitLabel="Add Timer"
           />
         </form>
